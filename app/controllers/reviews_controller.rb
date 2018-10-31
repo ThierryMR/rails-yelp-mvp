@@ -7,11 +7,16 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
+    @review = @restaurant.reviews.build(review_params)
     # we need `restaurant_id` to asssociate review with corresponding restaurant
-    @review.restaurant = @restaurant
-    @review.save
-    redirect_to restaurant_path(@restaurant)
+    # @review.restaurant = @restaurant
+    # @review.save
+    # redirect_to restaurant_path(@restaurant)
+    if @review.save
+      redirect_to restaurant_path(@restaurant)
+    else
+      render :new
+    end
   end
 
   private
@@ -25,4 +30,4 @@ class ReviewsController < ApplicationController
   end
 end
 
-Review.new(:symbol "string" , :content "string")
+# # Review.new(:symbol "string" , :content "string")
