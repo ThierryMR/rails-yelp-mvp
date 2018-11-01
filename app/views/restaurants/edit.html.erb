@@ -1,0 +1,13 @@
+<h1>Editing Restaurant</h1>
+
+    <%= simple_form_for @restaurant do |f| %>
+       <span class="span"> <%= f.input :name  %></span>
+        <span class="span"><%= f.input :address  %></span>
+        <span class="span"><%= f.input :category  %></span>
+        <span class="span"><%= f.input :phone_number %></span>
+        <span class="span"> <% link_to "index" %>  <%= f.submit  class:"btn btn-primary"%></span>
+
+  <% end %>
+
+<%= link_to 'Show', @restaurant %> |
+<%= link_to 'Back', restaurants_path %>

@@ -1,22 +1,4 @@
-# class RestaurantsController < ApplicationController
 
-#   def index
-#     # @restaurants = Restaurant.find(params[:restaurant_id])
-#     @restaurants = Restaurant.all
-#   end
-
-#   def show
-#     @restaurants = Restaurant.find(params[:id])
-#   end
-
-#   def create
-#     @restaurant = Restaurant.new
-#   end
-
-#   def new
-#     @restaurant = Restaurant.find(params[:restaurant_id])
-#   end
-# end
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
@@ -38,6 +20,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1/edit
   def edit
+
   end
 
   # POST /restaurants

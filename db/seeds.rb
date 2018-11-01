@@ -31,9 +31,3 @@ Restaurant.create!(
    phone_number: '+353467821',
    category:     'french',
  )
-Restaurant.create!(
-   name:         'Bombaim',
-   address:      '110 Liverpool St, London',
-   phone_number: '+353329986',
-   category:     'indian',
- )
